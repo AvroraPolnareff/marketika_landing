@@ -1,0 +1,135 @@
+@import 'mixins'
+
+$color-primary: #6C6C6C
+
+*
+    box-sizing: border-box
+body
+    +lato-regular
+
+
+p
+    +lato-light
+    font-size: 16px
+    color: color-primary
+
+.section-inner
+        width: 1180px
+        margin: 0 auto
+
+.header
+    color: #ffffff
+    background: url('../img/header-picture.jpg') no-repeat 50% 50%
+    background-size: cover
+    position: relative
+
+    .section-inner
+        height: 100vh
+        position: relative
+        z-index: 10
+        display: flex
+        flex-direction: column
+    
+
+    &::before
+        content: ''
+        position: absolute
+        z-index: 5
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        background-color: rgba(20, 39, 41, .6)
+    
+    &-logo
+        +lato-bold
+        font-size: 24px
+        flex-shrink: 1
+        padding-top: 35px
+    
+    &-content
+        flex-grow: 1
+        display: flex
+        align-items: center
+        justify-content: space-around
+        
+    &-wrapper
+        width: 75%
+        
+        &__title
+            text-align: center
+            +lato-bold
+            font-size: 55px
+            line-height: 60px
+            margin-bottom: 16px
+
+        &__subtitle
+            text-align: center
+            +lato-regular
+            font-size: 18px
+            line-height: 32px
+            margin-bottom: 44px
+
+        &__form
+            display: flex
+            &-input
+                flex: 1
+                padding-right: 40px
+                input
+                    border: none
+                    background: rgba(255, 255, 255, .25)
+                    font-size: 16px
+                    margin: 0
+                    padding: 16px 20px
+                    outline: none
+                    border-radius: 4px
+                    width: 100%
+                    &::placeholder
+                        color: #ffffff
+            &-button
+                button
+                    color: #ffffff
+                    font-size: 16px
+                    margin: 0
+                    padding: 16px 20px
+                    border: none
+                    background: linear-gradient(to right, #FE985B, #FE4FA7)
+                    width: 100%
+                    border-radius: 4px
+
+.section-promo
+    .section-inner
+        height: 100vh
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+    &-wrapper
+        flex-direction: column
+
+    &-1
+        display: flex
+        justify-content: space-between
+        width: 50%
+        &__text
+            text-align: left
+            &-title
+                padding-bottom: 60px
+            &-content
+                padding-bottom: 60px
+            
+        &__video
+            background: url('../img/video.jpg') norepeat 50% 50%
+            background-size: cover
+            position: relative
+
+        
+
+
+        
+
+                
+
+            
+            
+
